@@ -1,0 +1,14 @@
+<div class="searx-navbar">
+    <span class="instance {% if rtl %}pull-right{% else %}pull-left{% endif%}">
+    </span>
+    <span class="{% if rtl %}pull-left{% else %}pull-right{% endif %}">
+        <a href="{{ url_for('preferences') }}">{{ _('preferences') }}</a>
+    </span>
+<button id="signin-button">Sign in with Blockstack </button>
+
+<script>
+ document.getElementById('signin-button').addEventListener('click', function() {
+   blockstack.redirectToSignIn()
+ });
+</script>
+</div>

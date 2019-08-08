@@ -1,0 +1,10 @@
+ {
+   "name": "Searx",
+   "start_url": "https://searx.world",
+   "description": "A customizable search engine",
+   "icons": [{
+     "src": "https://github.com/agnelvishal/my-storage/raw/master/192.png",
+     "sizes": "192x192",
+     "type": "image/png"
+   }]
+ }
