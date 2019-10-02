@@ -34,7 +34,7 @@ storePref();
 // Storing Preference in storage
 function storePref()
 {
-document.querySelector("#personName")=blockstack.loadUserData().profile.name;
+document.querySelector("#personName").textContent = blockstack.loadUserData().profile.name;
 var val;
 fetch('https://searx.world/preferences')
     .then(function(response) {
