@@ -5,7 +5,10 @@
         <a href="{{ url_for('preferences') }}">{{ _('preferences') }}</a>
     </span>
 <button id="signin-button">Sign in with Blockstack </button>
-
+<span id="afterLogin">
+Hi <span id="personName"></span>. <a href="{{ url_for('preferences') }}"> Check your settings here</a>
+</span>
+	
 <script>
   const appConfig = new blockstack.AppConfig();
   const userSession = new blockstack.UserSession({ appConfig: appConfig });
@@ -31,6 +34,7 @@ storePref();
 // Storing Preference in storage
 function storePref()
 {
+document.querySelector("#personName")=blockstack.loadUserData().profile.name;
 var val;
 fetch('https://searx.world/preferences')
     .then(function(response) {
