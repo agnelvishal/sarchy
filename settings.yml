@@ -72,6 +72,7 @@ engines:
     content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
     categories : general
     timeout : 3.0
+    disabled : True
     shortcut : amzde
 
   - name : amazon France
@@ -82,6 +83,7 @@ engines:
     content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
     categories : general
     timeout : 3.0
+    disabled : True    
     shortcut : amzfr
 
   - name : amazon UK
@@ -92,6 +94,7 @@ engines:
     content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
     categories : general
     timeout : 3.0
+    disabled : True    
     shortcut : amzuk
 
   - name : amazon in
@@ -102,6 +105,7 @@ engines:
     content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
     categories : general
     timeout : 3.0
+    disabled : True    
     shortcut : amzin
 
   - name : amazon it
@@ -112,6 +116,7 @@ engines:
     content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
     categories : general
     timeout : 3.0
+    disabled : True    
     shortcut : amzit
 
   - name : arch linux wiki

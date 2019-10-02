@@ -115,135 +115,170 @@
 </div>
 
 <script>
-    n = Math.floor((Math.random() * 10)) % 4;
-    if (n == 0) {
-        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/steveT.png";
-        p = document.createElement("p");
-        p.setAttribute("style", "position:absolute;top:20%;");
-        cText = document.createTextNode(
-            "If today were the last day of my life, would I want to do what I am about to do today?"
-        );
-        p.appendChild(cText);
-        document.querySelector("#card_text").appendChild(p);
-        async function aff() {
-            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
-            ipJson = await ipApi.json();
-            if (ipJson.country_name == "India") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.in/s?k=steve+jobs&tag=%27cleantip-21%27";
-            }
-            if (ipJson.country_name== "United States") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.com/gp/product/1451648537/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=pragmata03-20&creative=9325&linkCode=as2&creativeASIN=1451648537&linkId=0ee2422d465f8a99dd71815213dbb00e";
-            }
-            if (ipJson.country_name== "France") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=steve jobs&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=6005978ad39960a3aca247835513d2e3";
-            }
+n = Math.floor((Math.random() * 100)) % 20;
+if (n == 0) {
+    document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/steveT.png";
+    p = document.createElement("p");
+    p.setAttribute("style", "position:absolute;top:20%;");
+    cText = document.createTextNode(
+        "If today were the last day of my life, would I want to do what I am about to do today?"
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+    async function aff() {
+        ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
+        ipJson = await ipApi.json();
+        if (ipJson.country_name == "India") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.in/s?k=steve+jobs&tag=%27cleantip-21%27";
         }
-        aff();
-    }
-
-    if (n == 1) {
-        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/krishnaT.png";
-        p = document.createElement("p");
-        cText = document.createTextNode(
-            "'Johnny Johnny yes papa' rhymes teaches that if you get caught, have a laughing therapy session to reduce the guilt."
-        );
-        p.appendChild(cText);
-        document.querySelector("#card_text").appendChild(p);
-
-        p = document.createElement("p");
-        cText = document.createTextNode(
-            "In a similar story, lord krishna in his childhood eats dirt. When his mother questions him, he denies and confidently opens his mouth. His mother instead of criticising, says she could not see as she became unconscious. She believes in her child more than her eyes."
-        );
-        p.appendChild(cText);
-        document.querySelector("#card_text").appendChild(p);
-
-        async function aff() {
-            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
-            ipJson = await ipApi.json();
-            if (ipJson.country_name == "India") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.in/s?k=steve+jobs&tag=%27cleantip-21%27";
-            }
-            if (ipJson.country_name== "United States") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.com/gp/product/1451648537/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=pragmata03-20&creative=9325&linkCode=as2&creativeASIN=1451648537&linkId=0ee2422d465f8a99dd71815213dbb00e";
-            }
-            if (ipJson.country_name== "France") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=steve jobs&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=6005978ad39960a3aca247835513d2e3";
-            }
+        if (ipJson.country_name == "United States") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.com/gp/product/1451648537/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=pragmata03-20&creative=9325&linkCode=as2&creativeASIN=1451648537&linkId=0ee2422d465f8a99dd71815213dbb00e";
         }
-        aff();
-
-    }
-
-    if (n == 2) {
-        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/maryT.png";
-        p = document.createElement("p");
-        p.setAttribute("style", "padding-top:3%;");
-        cText = document.createTextNode(
-            "When Mother Mary became pregnant without conceiving from Joseph, the society instead of criticising her, said it was the work of god. They called the son, a god and he became a god."
-        );
-        p.appendChild(cText);
-        document.querySelector("#card_text").appendChild(p);
-
-        p = document.createElement("p");
-        cText = document.createTextNode(
-            "Blind trust made god."
-        );
-        p.appendChild(cText);
-        document.querySelector("#card_text").appendChild(p);
-    
-        async function aff() {
-            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
-            ipJson = await ipApi.json();
-            if (ipJson.country_name == "India") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.in/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=cleantip-21&keywords=mother mary&index=aps&camp=3638&creative=24630&linkCode=ur2&linkId=ee09537e7927fe9fbe4bd7a2da9df644";
-            }
-            if (ipJson.country_name== "United States") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.com/s?k=mother+mary&camp=1789&creative=9325&linkCode=xm2&linkId=56ed6bbcf4478d03e58948331c0736f3&tag=pragmata03-20&ref=as_li_qf_sp_sr_il_tl";
-            }
-            if (ipJson.country_name== "France") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.fr/s?k=vierge+Marie&camp=1642&creative=6746&linkCode=ur2&linkId=d513255441280c1f93e8eff8551b87b5&tag=pragmata0e-21&ref=as_li_qf_sp_sr_tl";
-            }
+        if (ipJson.country_name == "France") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=steve jobs&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=6005978ad39960a3aca247835513d2e3";
         }
-        aff();
     }
+    aff();
+}
 
-    if (n == 3) {
-        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/gandhiT.png";
-        p = document.createElement("p");
-        p.setAttribute("style", "padding-top:9%;");
-        cText = document.createTextNode(
-            "Gandhi is like an Onion. If you peel it, you will cry."
-        );
-        p.appendChild(cText);
-        document.querySelector("#card_text").appendChild(p);
-        async function aff() {
-            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
-            ipJson = await ipApi.json();
-            if (ipJson.country_name== "India") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.in/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=cleantip-21&keywords=mahatma gandhi&index=aps&camp=3638&creative=24630&linkCode=ur2&linkId=bd174b9500fa7af7dd6e43c95d2bb22f";
-            }
-            if (ipJson.country_name== "United States") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata03-20&keywords=mahatma gandhi&index=aps&camp=1789&creative=9325&linkCode=ur2&linkId=abe192ba3313a6055ee60a11f57f97ff";
-            }
-            if (ipJson.country_name== "France") {
-                document.querySelector("#card a").href =
-                    "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=mahatma Gandhi&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=eb61cfb941a1113b274f074ca8abc237";
-            }
+if (n == 1) {
+    document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/krishnaT.png";
+    p = document.createElement("p");
+    cText = document.createTextNode(
+        "'Johnny Johnny yes papa' rhymes teaches that if you get caught, have a laughing therapy session to reduce the guilt."
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+
+    p = document.createElement("p");
+    cText = document.createTextNode(
+        "In a similar story, lord krishna in his childhood eats dirt. When his mother questions him, he denies and confidently opens his mouth. His mother instead of criticising, says she could not see as she became unconscious. She believes in her child more than her eyes."
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+
+    async function aff() {
+        ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
+        ipJson = await ipApi.json();
+        if (ipJson.country_name == "India") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.in/s?k=steve+jobs&tag=%27cleantip-21%27";
         }
-        aff();
-
+        if (ipJson.country_name == "United States") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.com/gp/product/1451648537/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=pragmata03-20&creative=9325&linkCode=as2&creativeASIN=1451648537&linkId=0ee2422d465f8a99dd71815213dbb00e";
+        }
+        if (ipJson.country_name == "France") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=steve jobs&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=6005978ad39960a3aca247835513d2e3";
+        }
     }
+    aff();
+
+}
+
+if (n == 2) {
+    document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/maryT.png";
+    p = document.createElement("p");
+    p.setAttribute("style", "padding-top:3%;");
+    cText = document.createTextNode(
+        "When Mother Mary became pregnant without conceiving from Joseph, the society instead of criticising her, said it was the work of god. They called the son, a god and he became a god."
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+
+    p = document.createElement("p");
+    cText = document.createTextNode(
+        "Blind trust made god."
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+
+    async function aff() {
+        ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
+        ipJson = await ipApi.json();
+        if (ipJson.country_name == "India") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.in/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=cleantip-21&keywords=mother mary&index=aps&camp=3638&creative=24630&linkCode=ur2&linkId=ee09537e7927fe9fbe4bd7a2da9df644";
+        }
+        if (ipJson.country_name == "United States") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.com/s?k=mother+mary&camp=1789&creative=9325&linkCode=xm2&linkId=56ed6bbcf4478d03e58948331c0736f3&tag=pragmata03-20&ref=as_li_qf_sp_sr_il_tl";
+        }
+        if (ipJson.country_name == "France") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.fr/s?k=vierge+Marie&camp=1642&creative=6746&linkCode=ur2&linkId=d513255441280c1f93e8eff8551b87b5&tag=pragmata0e-21&ref=as_li_qf_sp_sr_tl";
+        }
+    }
+    aff();
+}
+
+if (n == 3) {
+    document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/gandhiT.png";
+    p = document.createElement("p");
+    p.setAttribute("style", "padding-top:9%;");
+    cText = document.createTextNode(
+        "Gandhi is like an Onion. If you peel it, you will cry."
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+    async function aff() {
+        ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
+        ipJson = await ipApi.json();
+        if (ipJson.country_name == "India") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.in/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=cleantip-21&keywords=mahatma gandhi&index=aps&camp=3638&creative=24630&linkCode=ur2&linkId=bd174b9500fa7af7dd6e43c95d2bb22f";
+        }
+        if (ipJson.country_name == "United States") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata03-20&keywords=mahatma gandhi&index=aps&camp=1789&creative=9325&linkCode=ur2&linkId=abe192ba3313a6055ee60a11f57f97ff";
+        }
+        if (ipJson.country_name == "France") {
+            document.querySelector("#card a").href =
+                "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=mahatma Gandhi&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=eb61cfb941a1113b274f074ca8abc237";
+        }
+    }
+    aff();
+
+}
+if (n > 3 && n < 10) {
+
+    document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/brave-lion.png";
+    p = document.createElement("p");
+    p.setAttribute("style", "padding-top:9%;");
+    cText = document.createTextNode(
+        "Brave Browser blocks all ads. Download by clicking this box. "
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+    async function aff() {
+        document.querySelector("#card a").href = "http://bit.ly/braveBrowserLink";
+    }
+    aff();
+
+}
+if (n >= 10) {
+
+    document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/brave-bat-partnership.png";
+    p = document.createElement("p");
+    p.setAttribute("style", "padding-top:9%;");
+    cText = document.createTextNode(
+        "Brave Browser pays you for watching ads. Download by clicking this box. "
+    );
+    p.appendChild(cText);
+    document.querySelector("#card_text").appendChild(p);
+    async function aff() {
+        document.querySelector("#card a").href = "http://bit.ly/braveBrowserDownload";
+    }
+    aff();
+
+}
+
+
+
 </script>
 
 
