@@ -164,6 +164,11 @@ app.after_request(add_cors_headers)
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
+@app.route('/pwabuilder-sw.js')
+def static_pwa_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
+
+
 @babel.localeselector
 def get_locale():
     locale = request.accept_languages.best_match(settings['locales'].keys())
