@@ -1,7 +1,9 @@
  {
-   "name": "Searx",
+   "name": "Sarchy",
+  	"short_name" : "Sarchy",
    "start_url": "https://searx.world",
    "description": "A customizable search engine",
+  	"short_name" : "Sarchy",
    "icons": [{
      "src": "https://github.com/agnelvishal/my-storage/raw/master/192.png",
      "sizes": "192x192",
