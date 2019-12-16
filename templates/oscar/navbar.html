@@ -37,7 +37,7 @@ function storePref()
 	document.querySelector("div.searx-navbar > span.pull-right > a").remove();
 	// Blockstack name and settings display
 	document.querySelector("#afterLogin").style.display="inline";
-	document.querySelector("#personName").textContent = blockstack.loadUserData().profile.name;
+	document.querySelector("#personName").textContent = userSession.loadUserData().profile.name;
 	
 // Blockstack storage	
 var val;
