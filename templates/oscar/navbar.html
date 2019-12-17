@@ -114,7 +114,7 @@ async function countGet() {
 
 
 
-(async function searchStoreMain() {
+async function searchStoreMain() {
 
     const element = document.querySelector('#search_form');
     element.addEventListener('submit', event => {
@@ -134,7 +134,7 @@ async function countGet() {
         }
     })
     countStore(count + 1)
-})();
+}
 
 (async function displayStoreMain() {
     let count = await countGet();
@@ -142,13 +142,15 @@ async function countGet() {
     let options = {
         decrypt: false
     }
-    for (let i=1;i<count;i++)
-    {
-    let fileName = `/s-${i}.txt`;
-    let search = await userSession.getFile(fileName, options)
-    console.log(search);
+    for (let i = 1; i < count; i++) {
+        let fileName = `/s-${i}.txt`;
+        let search = await userSession.getFile(fileName, options)
+        console.log(search);
     }
 })();
+
+window.addEventListener('load', async function () { await searchStoreMain() })
+
 
 </script>
 	
