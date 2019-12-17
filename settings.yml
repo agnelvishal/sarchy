@@ -11,7 +11,7 @@ search:
 
 server:
     port : 8888
-    bind_address : "134.209.231.175" # address to listen on
+    bind_address : "46.101.157.218" # address to listen on
     secret_key : "82bcbe2621e54b265f4ed0d7d1b8135a" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
     image_proxy : False # Proxying image results through searx
