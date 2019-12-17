@@ -10,6 +10,8 @@ Hi <span id="personName"></span>. <a href="{{ url_for('preferences') }}"> Check 
 </span>
 	
 <script>
+		
+	
   const appConfig = new blockstack.AppConfig();
   const userSession = new blockstack.UserSession({ appConfig: appConfig });
 
@@ -68,5 +70,86 @@ console.log("Added preference to storage");
 
 </script>
 
+<script>
 
+// SCRIPT FOR STORING SND DISPLAYING SEARCHES
+
+function storeInDb() {
+    let searchString = document.querySelector("#q").value
+    localStorage.setItem("searx-" + searchString, searchString);
+    console.log("stored in local")
+}
+
+
+function storeInBlockstack(search, count) {
+    let options = {
+        encrypt: false
+    }
+    let fileName = `/s-${count}.txt`;
+    userSession.putFile(fileName, search, options)
+        .then(() => {
+            console.log("Added search string to blockstack storage");
+        })
+}
+
+function countStore(count) {
+    let options = {
+        encrypt: false
+    }
+    userSession.putFile("/s-count.txt", String(count), options)
+        .then(() => {
+            console.log("Storing Count value");
+        })
+}
+
+async function countGet() {
+    let options = {
+        decrypt: false
+    }
+    let count = await userSession.getFile("/s-count.txt", options)
+    console.log("Got count");
+    return Number(count)
+}
+
+
+
+
+(async function searchStoreMain() {
+
+    const element = document.querySelector('#search_form');
+    element.addEventListener('submit', event => {
+        event.preventDefault();
+        storeInDb()
+        element.submit()
+    });
+
+    let count = await countGet();
+
+    // Finding searx searches in localstorage
+    Object.keys(localStorage).forEach(function (key) {
+        let search = localStorage.getItem(key);
+        if (key.startsWith("searx-")) {
+            console.log(search);
+            storeInBlockstack(search, count)
+        }
+    })
+    countStore(count + 1)
+})();
+
+(async function displayStoreMain() {
+    let count = await countGet();
+
+    let options = {
+        decrypt: false
+    }
+    for (let i=1;i<count;i++)
+    {
+    let fileName = `/s-${i}.txt`;
+    let search = await userSession.getFile(fileName, options)
+    console.log(search);
+    }
+})();
+
+</script>
+	
 </div>
